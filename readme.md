@@ -6,4 +6,4 @@
 ![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED)
 ![Redis](https://img.shields.io/badge/Redis-Cache-DC382D)
 
-this project are 
+this project are  
