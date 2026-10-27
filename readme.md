@@ -7,3 +7,8 @@
 ![Redis](https://img.shields.io/badge/Redis-Cache-DC382D)
 
 this project are    
+
+## 🗄 Database Architecture (ERD)
+<p align="center">
+  <img src="assets/image/erd-iMS.jpg" width="700"/>
+</p>
