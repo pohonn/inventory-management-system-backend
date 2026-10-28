@@ -1,0 +1,31 @@
+services:
+  postgres:
+    container_name: ims_postgres
+    image: postgres:latest 
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: inventory_system
+    ports:
+      - 5433:5432
+    volumes:
+      - type: volume
+        source: inventory-system-volume
+        target: "/var/lib/postgresql"
+        read_only: false
+  
+  redis:
+    container_name: ims_redis
+    image: redis:latest
+    ports:
+      - 6378:6379
+    volumes:
+      - redis-data:/data
+    restart: unless-stopped
+
+
+volumes:
+  inventory-system-volume:
+    name: inventory-system-volume
+  redis-data:
+    driver: local
