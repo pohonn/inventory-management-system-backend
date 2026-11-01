@@ -29,7 +29,7 @@ public class BuyingEntity {
 
     @Column(name = "process_type")
     @Enumerated(EnumType.STRING)
-    private ProcessType processType;
+    private ProcessType status;
 
     @ManyToOne
     @JoinColumn(name = "code_vendor", referencedColumnName = "code")
