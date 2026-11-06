@@ -29,7 +29,7 @@ public class SellingEntity {
     private ProcessType status;
 
     @ManyToOne
-    @JoinColumn(name = "warehouse", referencedColumnName = "id")
+    @JoinColumn(name = "warehouse", referencedColumnName = "id_warehouse")
     private WarehouseEntity warehouse;
 
     @ManyToOne

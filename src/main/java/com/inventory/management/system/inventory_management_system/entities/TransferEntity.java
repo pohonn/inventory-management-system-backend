@@ -26,6 +26,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class TransferEntity {
 
+    // TODO: warehousefrom dan warehouseDestination perlu ditambah ke List
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_transfer")

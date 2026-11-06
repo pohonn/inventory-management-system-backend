@@ -36,7 +36,7 @@ public class BuyingEntity {
     private VendorEntity codeVendor;
 
     @ManyToOne
-    @JoinColumn(name = "id_warehouse", referencedColumnName = "idWarehouse")
+    @JoinColumn(name = "id_warehouse", referencedColumnName = "id_warehouse")
     private WarehouseEntity idWarehouse;
 
 }

@@ -29,7 +29,7 @@ public class InventoryEntity {
     private ProductEntity codeProduct;
 
     @ManyToOne
-    @JoinColumn(name = "id_warehouse", referencedColumnName = "idWarehouse")
+    @JoinColumn(name = "id_warehouse", referencedColumnName = "id_warehouse")
     private WarehouseEntity idWarehouse;
 
     private int stock;

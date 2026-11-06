@@ -1,6 +1,10 @@
 package com.inventory.management.system.inventory_management_system.entities;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
@@ -17,6 +21,9 @@ import lombok.Setter;
 @NoArgsConstructor
 public class TransferDetailEntity {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_transfer_detail")
     private int idTransferDetail;
 
     private String codeProduct;
@@ -24,7 +31,7 @@ public class TransferDetailEntity {
     private int stockSent;
 
     @ManyToOne
-    @JoinColumn(name = "transfer", referencedColumnName = "transferDetail")
+    @JoinColumn(name = "transfer", referencedColumnName = "id_transfer")
     private TransferEntity transfer;
 
 }

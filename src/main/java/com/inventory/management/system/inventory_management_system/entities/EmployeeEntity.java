@@ -39,7 +39,7 @@ public class EmployeeEntity {
     private Address address;
 
     @ManyToOne
-    @JoinColumn(name = "working_at", referencedColumnName = "workers")
+    @JoinColumn(name = "working_at", referencedColumnName = "id_warehouse")
     private WarehouseEntity workingAt;
 
 }
