@@ -7,9 +7,6 @@ import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.JoinTable;
-import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -48,7 +45,9 @@ public class WarehouseEntity {
     @OneToMany(mappedBy = "warehouse", fetch = FetchType.LAZY)
     private List<SellingEntity> seller;
 
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "warehouse_transfer", joinColumns = @JoinColumn(name = "id_transfer"), inverseJoinColumns = @JoinColumn(name = "id_warehouse"))
-    private List<TransferEntity> transfers;
+    @OneToMany(mappedBy = "warehouseFrom", fetch = FetchType.LAZY)
+    private List<TransferEntity> from;
+
+    @OneToMany(mappedBy = "warehouseDestination", fetch = FetchType.LAZY)
+    private List<TransferEntity> destination;
 }
