@@ -1,5 +1,6 @@
 package com.inventory.management.system.inventory_management_system.entities;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import jakarta.persistence.Column;
@@ -35,6 +36,9 @@ public class ProductEntity {
     private double buyingPrice;
 
     private int stock;
+
+    @Column(name = "expired_date")
+    private LocalDate expiredDate;
 
     @Column(name = "product_category")
     @Enumerated(EnumType.STRING)
